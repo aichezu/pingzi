@@ -3,48 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monster Survivors - Play Online at pingzi.lol</title>
+  <title>Monster Survivors - Play Online | pingzi.lol</title>
   <meta name="description" content="Play Monster Survivors online for free! Survive waves of monsters in this thrilling action game. Enjoy seamless gameplay on PC and mobile at pingzi.lol.">
-  <link rel="canonical" href="https://pingzi.lol/">
+  <link rel="canonical" href="https://pingzi.lol/" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
-  <div class="max-w-3xl mx-auto px-4 py-8">
-    <header class="mb-8 text-center">
+  <div class="min-h-screen flex flex-col items-center justify-start px-4 py-8 md:py-16">
+    <header class="w-full max-w-3xl text-center mb-8">
       <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Monster Survivors</h1>
-      <p class="text-lg md:text-xl text-gray-700">Survive relentless monster waves in this action-packed online game!</p>
+      <p class="text-lg md:text-xl text-gray-700 mb-2">Survive the monster horde in this thrilling online action game!</p>
     </header>
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-green-600 mb-2">Play Monster Survivors Online</h2>
-      <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white">
-        <iframe 
-          src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
-          title="Monster Survivors Online Game" 
-          class="w-full h-96 md:h-[480px] border-0" 
-          allowfullscreen></iframe>
-      </div>
-    </section>
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-purple-600 mb-2">Game Overview</h2>
-      <p class="text-gray-800 mb-4">Monster Survivors is an exciting survival action game where you must battle endless waves of monsters. Use unique abilities, collect power-ups, and test your skills to see how long you can last. Whether you're a casual gamer or a hardcore survivor, Monster Survivors offers thrilling gameplay for everyone.</p>
-    </section>
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-pink-600 mb-2">Key Features</h2>
-      <ul class="list-disc list-inside text-gray-800 space-y-1">
-        <li>Fast-paced, wave-based survival gameplay</li>
-        <li>Unique characters and abilities</li>
-        <li>Power-ups and upgrades to enhance your run</li>
-        <li>Optimized for both PC and mobile devices</li>
-        <li>No download required – play instantly online</li>
-      </ul>
-    </section>
-    <section>
-      <h2 class="text-2xl font-semibold text-yellow-600 mb-2">How to Play</h2>
-      <p class="text-gray-800">Use your keyboard or touchscreen to control your character, dodge enemies, and unleash powerful attacks. Survive as long as possible and climb the leaderboards!</p>
-    </section>
+    <main class="w-full max-w-3xl flex flex-col items-center">
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-green-600 mb-2">Play Monster Survivors Online</h2>
+        <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white">
+          <iframe src="https://www.crazygames.com/embed/zombie-horde-build-survive" style="width: 100%; height: 100%; min-height: 400px;" frameborder="0" allow="gamepad *;"></iframe>
+        </div>
+      </section>
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-yellow-600 mb-2">About Monster Survivors</h2>
+        <p class="text-base md:text-lg text-gray-800 mb-2">
+          Monster Survivors is an action-packed survival game where you must fend off relentless waves of monsters. Build, upgrade, and strategize to stay alive as long as possible. Whether you're on PC or mobile, enjoy smooth gameplay and intuitive controls.
+        </p>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Genre: Action, Survival</li>
+          <li>Platform: Web (PC & Mobile supported)</li>
+          <li>Controls: Keyboard, Mouse, Touch</li>
+          <li>Developer: CrazyGames</li>
+        </ul>
+      </section>
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-red-600 mb-2">How to Play</h2>
+        <p class="text-base md:text-lg text-gray-800">
+          Use your keyboard or touch controls to move your character, collect resources, and defeat monsters. Upgrade your weapons and defenses to survive longer and achieve a high score!
+        </p>
+      </section>
+      <!-- Rating & Social Share Section Start -->
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Rate & Share Monster Survivors</h2>
+        <!-- Like & Star Rating -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4">
+          <div class="flex items-center gap-4">
+            <button id="likeBtn" class="flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 9l-2-2m0 0l-2 2m2-2v6m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Like <span id="likeCount" class="ml-2">0</span>
+            </button>
+            <div class="flex items-center ml-4">
+              <span class="mr-2 text-gray-700">Rate:</span>
+              <div id="starRating" class="flex">
+                <button class="star text-yellow-400 text-2xl focus:outline-none" data-value="1">&#9733;</button>
+                <button class="star text-yellow-400 text-2xl focus:outline-none" data-value="2">&#9733;</button>
+                <button class="star text-yellow-400 text-2xl focus:outline-none" data-value="3">&#9733;</button>
+                <button class="star text-yellow-400 text-2xl focus:outline-none" data-value="4">&#9733;</button>
+                <button class="star text-yellow-400 text-2xl focus:outline-none" data-value="5">&#9733;</button>
+              </div>
+              <span id="avgRating" class="ml-2 text-gray-600 text-sm">(0.0)</span>
+            </div>
+          </div>
+          <!-- Social Share -->
+          <div class="flex items-center gap-2">
+            <span class="text-gray-700 mr-2">Share:</span>
+            <a href="#" id="shareTwitter" class="p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white" title="Share on Twitter" target="_blank" rel="noopener"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04A4.28 4.28 0 0016.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6-.71-.02-1.38-.22-1.97-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 012 19.54c-.29 0-.57-.02-.85-.05A12.13 12.13 0 007.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0024 4.59a8.36 8.36 0 01-2.54.7z"/></svg></a>
+            <a href="#" id="shareFacebook" class="p-2 rounded-full bg-blue-700 hover:bg-blue-800 text-white" title="Share on Facebook" target="_blank" rel="noopener"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg></a>
+            <a href="#" id="shareReddit" class="p-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white" title="Share on Reddit" target="_blank" rel="noopener"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12zm-6.5 1.5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-11 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm10.5 3.5c-1.104 1.104-3.104 1.104-4.208 0-.195-.195-.512-.195-.707 0-.195.195-.195.512 0 .707 1.494 1.494 4.122 1.494 5.616 0 .195-.195.195-.512 0-.707-.195-.195-.512-.195-.707 0zM12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg></a>
+          </div>
+        </div>
+        <!-- Comments -->
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Comments</h3>
+          <form id="commentForm" class="flex flex-col md:flex-row gap-2 mb-4">
+            <input type="text" id="commentName" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your name (optional)">
+            <input type="text" id="commentText" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Share your experience or ask a question..." required>
+            <button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">Post</button>
+          </form>
+          <ul id="commentsList" class="space-y-2"></ul>
+        </div>
+      </section>
+      <!-- Rating & Social Share Section End -->
+
+      <!-- Guide & Developer Story Section Start -->
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-purple-600 mb-2">Tips & Strategies</h2>
+        <p class="text-base md:text-lg text-gray-800 mb-4">
+          As a seasoned player, you'll want to keep moving to avoid being surrounded. Focus on upgrading your weapons early and collect resources as soon as they appear. Don't forget to use obstacles to your advantage and always keep an eye on your health bar. Surviving longer means more rewards!
+        </p>
+        <h3 class="text-lg font-semibold text-pink-600 mb-2">Behind the Game</h3>
+        <p class="text-base md:text-lg text-gray-800">
+          Monster Survivors is a special project created by a 6-year-old boy from China and his dad. They designed this game to share the fun of survival adventures with children all over the world. The goal is to connect kids from China and other countries, letting everyone share their favorite hobbies and ideas. If you are a young player from abroad, feel free to leave your suggestions or tell us what kind of games you want to play in the comments—we'd love to make your ideas come true together!
+        </p>
+      </section>
+      <!-- Guide & Developer Story Section End -->
+
+      <!-- Related Games Section Start -->
+      <section class="w-full mb-8">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-4">You Might Also Like</h2>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a href="https://fruitcut.online" target="_blank" rel="noopener" class="flex-1 bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 p-4 flex flex-col items-center transition">
+            <img src="https://fruitcut.online/favicon.ico" alt="Fruit Cut" class="w-12 h-12 mb-2">
+            <span class="text-lg font-semibold text-green-600 mb-1">Fruit Cut</span>
+            <span class="text-gray-600 text-sm text-center">A juicy and fast-paced slicing game. Test your reflexes and aim for the highest score!</span>
+          </a>
+          <a href="https://aircraftshooting.top" target="_blank" rel="noopener" class="flex-1 bg-white rounded-lg shadow hover:shadow-lg border border-gray-200 p-4 flex flex-col items-center transition">
+            <img src="https://aircraftshooting.top/favicon.ico" alt="Aircraft Shooting" class="w-12 h-12 mb-2">
+            <span class="text-lg font-semibold text-blue-700 mb-1">Aircraft Shooting</span>
+            <span class="text-gray-600 text-sm text-center">Pilot your aircraft, dodge enemy fire, and shoot down waves of opponents in this action-packed game.</span>
+          </a>
+        </div>
+      </section>
+      <!-- Related Games Section End -->
+    </main>
+    <footer class="w-full max-w-3xl text-center mt-8 text-gray-500 text-sm">
+      &copy; 2024 pingzi.lol. All rights reserved.
+    </footer>
   </div>
-  <footer class="text-center py-6 text-gray-500 text-sm">
-    &copy; 2024 pingzi.lol. All rights reserved.
-  </footer>
+  <!-- Responsive aspect ratio for iframe -->
+  <style>
+    .aspect-w-16 {
+      position: relative;
+      width: 100%;
+    }
+    .aspect-w-16::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    .aspect-w-16 > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 640px) {
+      .aspect-w-16::before {
+        padding-top: 70%;
+      }
+    }
+  </style>
+  <script>
+    // Like Button
+    const likeBtn = document.getElementById('likeBtn');
+    const likeCount = document.getElementById('likeCount');
+    let likes = parseInt(localStorage.getItem('monsterLikes') || '0');
+    let liked = localStorage.getItem('monsterLiked') === 'yes';
+    likeCount.textContent = likes;
+    if (liked) likeBtn.classList.add('opacity-50', 'pointer-events-none');
+    likeBtn && likeBtn.addEventListener('click', () => {
+      if (!liked) {
+        likes++;
+        likeCount.textContent = likes;
+        localStorage.setItem('monsterLikes', likes);
+        localStorage.setItem('monsterLiked', 'yes');
+        likeBtn.classList.add('opacity-50', 'pointer-events-none');
+      }
+    });
+
+    // Star Rating
+    const stars = document.querySelectorAll('.star');
+    const avgRating = document.getElementById('avgRating');
+    let ratings = JSON.parse(localStorage.getItem('monsterRatings') || '[]');
+    let rated = localStorage.getItem('monsterRated') === 'yes';
+    function updateAvgRating() {
+      if (ratings.length === 0) {
+        avgRating.textContent = '(0.0)';
+        return;
+      }
+      const avg = (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
+      avgRating.textContent = `(${avg})`;
+    }
+    updateAvgRating();
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        if (rated) return;
+        const val = parseInt(this.getAttribute('data-value'));
+        ratings.push(val);
+        localStorage.setItem('monsterRatings', JSON.stringify(ratings));
+        localStorage.setItem('monsterRated', 'yes');
+        rated = true;
+        updateAvgRating();
+        stars.forEach(s => s.classList.add('opacity-50', 'pointer-events-none'));
+      });
+    });
+    if (rated) stars.forEach(s => s.classList.add('opacity-50', 'pointer-events-none'));
+
+    // Comments
+    const commentForm = document.getElementById('commentForm');
+    const commentName = document.getElementById('commentName');
+    const commentText = document.getElementById('commentText');
+    const commentsList = document.getElementById('commentsList');
+    let comments = JSON.parse(localStorage.getItem('monsterComments') || '[]');
+    function renderComments() {
+      commentsList.innerHTML = '';
+      comments.slice(-20).reverse().forEach(c => {
+        const li = document.createElement('li');
+        li.className = 'bg-gray-100 rounded p-2';
+        li.innerHTML = `<span class='font-semibold text-blue-700'>${c.name ? c.name : 'Anonymous'}:</span> <span>${c.text}</span>`;
+        commentsList.appendChild(li);
+      });
+    }
+    renderComments();
+    commentForm && commentForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = commentName.value.trim();
+      const text = commentText.value.trim();
+      if (!text) return;
+      comments.push({ name, text });
+      localStorage.setItem('monsterComments', JSON.stringify(comments));
+      commentText.value = '';
+      renderComments();
+    });
+
+    // Social Share
+    const shareUrl = encodeURIComponent(window.location.href);
+    const shareText = encodeURIComponent('Play Monster Survivors online at pingzi.lol!');
+    document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`;
+    document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    document.getElementById('shareReddit').href = `https://www.reddit.com/submit?url=${shareUrl}&title=${shareText}`;
+  </script>
 </body>
 </html> 
